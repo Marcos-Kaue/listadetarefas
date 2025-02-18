@@ -10,6 +10,12 @@
     <div>
         <h1>Lista de Tarefas</h1>
         <input type="text" name="tarefa" id="tarefa" placeholder="Digite uma tarefa">
+        <label for="categoria">Categoria</label>
+        <select name="categoria" id="categoria">
+            <option value="Trabalho">Trabalho</option>
+            <option value="Pessoal">Pessoal</option>
+            <option value="Outros">Outros</option>
+        </select>
         <button onclick="adicionarTarefa()">Adicionar</button>
         <ul id="lista"></ul>
         <script src="script.js"></script>
