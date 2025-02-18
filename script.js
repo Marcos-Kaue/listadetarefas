@@ -8,7 +8,7 @@ function adicionarTarefa(){
     let input = document.getElementById("tarefa");
     let texto = input.value.trim();
     let categoria = document.getElementById("categoria").value;
-        if(texto !== ""){
+    if(texto !== ""){
         let lista = document.getElementById("lista");
         let item = document.createElement("li");
         item.classList.add("lista-adicionada");
@@ -16,16 +16,16 @@ function adicionarTarefa(){
         lista.appendChild(item);
         input.value = "";
         atualizarContador();
-        }
     }
-    
+}
+
 function concluirTarefa(botao) {
-        let item = botao.parentElement;
-        item.classList.add("lista-concluidas");
-        item.classList.remove("lista-adicionada");
-        document.getElementById("lista-concluidas").appendChild(item);
-        botao.remove();
-        atualizarContador();
+    let item = botao.parentElement;
+    item.classList.add("lista-concluidas");
+    item.classList.remove("lista-adicionada");
+    document.getElementById("lista-concluidas").appendChild(item);
+    botao.remove();
+    atualizarContador();
 }
 
 function removerTarefa(botao){
@@ -35,7 +35,7 @@ function removerTarefa(botao){
 
 function atualizarContador(){
     let totalTarefas = document.getElementById("lista").children.length;
-    let.totalConcluidas = document.getElementById("lista-concluidas").children.length;
-    document.getElementById("contador-tarefas"). textContent = `trefas: ${totalTarefas}`;
-    document.getElementById("cotador -concluidas").textContent = `Concluidas: ${totalConcluidas}`;
+    let totalConcluidas = document.getElementById("lista-concluidas").children.length;
+    document.getElementById("contador-tarefas").textContent = `Tarefas: ${totalTarefas}`;
+    document.getElementById("contador-concluidas").textContent = `Concluídas: ${totalConcluidas}`;
 }

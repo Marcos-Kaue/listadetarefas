@@ -115,6 +115,11 @@ li button {
     margin-left: 5px;
     flex-shrink: 0; 
 }
+#contador-tarefas, #contador-concluidas {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
 
 @media(max-width: 500px){
     body{
