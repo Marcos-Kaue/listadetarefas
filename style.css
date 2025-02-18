@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(f0f0f0);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    margin: 0;
+    color: #333;
+}
+div{
+    background-color: rgb(fff);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: 10px auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.447);
+}
+#tarefas-concluidas{
+    margin: 50px;
+}
+.lista-adicionada{
+    background-color: rgb(f9f9f9);
+    border-radius:10px ;
+}
+.lista-concluidas{
+    background-color: rgb(#d4edda);
+    border-radius:10px ;
+    text-decoration: line-through;
+    color: #888;
+}
+input{
+    padding: 5px;
+}
+
+button{
+    padding: 10px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+}
+
+butoon:hover{
+    background-color: #0056b3;
+}
+ul{
+    
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    margin: 5px;
+    padding:5px;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+@media(max-width: 500px){
+    body{
+        flex-direction: column;
+    }
+    div{
+        width: 90%;
+    }
+}
