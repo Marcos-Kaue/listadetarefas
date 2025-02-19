@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div id="container">
         <h1>Lista de Tarefas</h1>
         <input type="text" name="tarefa" id="tarefa" placeholder="Digite uma tarefa">
         <label for="categoria">Categoria</label>
@@ -16,6 +16,7 @@
             <option value="Pessoal">Pessoal</option>
             <option value="Outros">Outros</option>
         </select>
+        <input type="time" id="hora-lembrete" placeholder="Hora do Lembrete">
         <button onclick="adicionarTarefa()">Adicionar</button>
         <ul id="lista"></ul>
         <p id="contador-tarefas">Tarefas: 0</p>

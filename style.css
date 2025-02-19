@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 500px;
+    height: 100%;
     margin: 0;
     color: #333;
 }
@@ -27,9 +27,9 @@ select {
     width: 100%;
     box-sizing: border-box;
 
-}
+}  
 #tarefas-concluidas{
-    margin: 50px;
+    margin: 10px;
 }
 .lista-adicionada{
     background-color: rgb(f9f9f9);

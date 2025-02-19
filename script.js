@@ -8,6 +8,7 @@ function adicionarTarefa(){
     let input = document.getElementById("tarefa");
     let texto = input.value.trim();
     let categoria = document.getElementById("categoria").value;
+    let horaLembrete = document.getElementById("hora-lembrete").value;
     if(texto !== ""){
         let lista = document.getElementById("lista");
         let item = document.createElement("li");
@@ -16,6 +17,9 @@ function adicionarTarefa(){
         lista.appendChild(item);
         input.value = "";
         atualizarContador();
+        if (horaLembrete) {
+            adicionarlembrete(texto, horaLembrete);
+        }
     }
 }
 
@@ -39,3 +43,18 @@ function atualizarContador(){
     document.getElementById("contador-tarefas").textContent = `Tarefas: ${totalTarefas}`;
     document.getElementById("contador-concluidas").textContent = `Concluídas: ${totalConcluidas}`;
 }
+
+function adicionarlembrete(tarefa, horaLembrete){
+    let [hora, minuto] = horaLembrete.split(":").map(Number);
+    let agora = new Date();
+    let lembrete = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate(), hora, minuto);
+    let tempoRestante = lembrete - agora;
+    if (tempoRestante > 0) {
+        setTimeout(function(){
+            alert(`Lembrete: Não esqueça de concluir a tarefa "${tarefa}"!`);
+        }, tempoRestante);
+    } else {
+        alert("A hora do lembrete deve ser no futuro!");
+    }
+}
+
